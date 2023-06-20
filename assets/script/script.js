@@ -60,7 +60,7 @@ const startTimer = () => {
                     workTitle.classList.remove("active");
                     shortTimeTitle.classList.add("active");
                 } else if (breakCount < 7) {
-                    minutes = workTime;
+                    minutes = workTime - 1;
                     breakCount++;
                     shortTimeTitle.classList.remove("active");
                     workTitle.classList.add("active");
@@ -69,6 +69,7 @@ const startTimer = () => {
                     breakCount = 0;
                     longTimeTitle.classList.add("active");
                     workTitle.classList.remove("active");
+                    shortTimeTitle.classList.remove("active");
                 }
                 seconds = 59;
             }
