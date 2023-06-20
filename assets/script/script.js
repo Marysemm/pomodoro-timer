@@ -86,7 +86,7 @@ let currentSeconds = 0;
 const pauseTimer = () => {
     clearInterval(countdown);
     currentMinutes = parseInt(document.getElementById("minutes").innerHTML);
-    currentSeconds = parseInt(document.getElementById("seconds").innerHTML);
+    currentSeconds = parseInt(document.getElementById("seconds").innerHTML) - 1;
     document.getElementById("start").style.display = "block";
 }
 
