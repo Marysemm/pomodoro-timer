@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro</title>
+    <link rel="stylesheet" href="./assets/styles/style.css">
+    <script src="https://kit.fontawesome.com/e9756da1d0.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <section>
+
+        <div class="container">
+            <button class="popup">
+                <i class="fa-solid fa-gear"></i>
+                <p class="popup__text">Settings</p>
+            </button>
+            <h1 class="pomodoro__title">Pomodoro Timer</h1>
+            <div class="pomodoro__body">
+                <div class="pomodoro__time-panel">
+                    <p id="workTime">Pomodoro</p>
+                    <p id="shortTimeBreak">Short Break</p>
+                    <p id="longTimeBreak">Long Break</p>
+                </div>
+                <div class="pomodoro__timer">
+                    <p id="minutes"></p>
+                    <p>:</p>
+                    <p id="seconds"></p>
+                </div>
+                <div class="pomodoro__controller">
+                    <button id="start" onclick="startTimer()"><i class="fa-solid fa-play"></i></button>
+                    <a href="https://marysemm.github.io/pomodoro-timer/" id="reset"><i class="fa-solid fa-arrow-rotate-left"></i></a>
+                    <button id="pause" onclick="pauseTimer()"><i class="fa-solid fa-pause"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="popup__bg">
+            <form class="popup__form">
+                <svg class="close-popup" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="#c491dd"
+                        d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z" />
+                </svg>
+                <label class="form__text" for="work-time-input">Work Time:</label>
+                <input type="number" id="work-time-input">
+                <label class="form__text"  for="short-break-input">Short Break:</label>
+                <input type="number" id="short-break-input">
+                <label class="form__text"  for="long-break-input">Long Break:</label>
+                <input type="number" id="long-break-input">
+                <button type="submit">Save</button>
+            </form>
+        </div>
+
+    </section>
+
+    <script src="./assets/script/script.js"></script>
+</body>
+
+</html>
